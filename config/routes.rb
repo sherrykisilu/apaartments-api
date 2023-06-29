@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  resources :apartments
-  resources :tenants 
-  resources :leases, only: [:create, :destroy]
+  # Apartments routes
+  resources :apartment, except: [:new, :edit]
+
+  # Tenants routes
+  resources :tenant, except: [:new, :edit]
+
+  # Leases routes
+  resources :lease, only: [:create, :destroy]
 end
