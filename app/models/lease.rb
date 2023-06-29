@@ -1,8 +1,7 @@
+# app/models/lease.rb
 class Lease < ApplicationRecord
   belongs_to :apartment
   belongs_to :tenant
-<<<<<<< HEAD
+
+  validates :rent, presence: true, numericality: { greater_than: 0 }
 end
-=======
-end
->>>>>>> f528912841855119bfdc11fc3cde6c2d58cd8cc4
