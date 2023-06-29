@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'tenants/no'
   # Apartments routes
   resources :apartment, except: [:new, :edit]
 
