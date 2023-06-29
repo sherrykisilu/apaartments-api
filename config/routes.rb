@@ -7,5 +7,4 @@ Rails.application.routes.draw do
 
   # Leases routes
   resources :lease, only: [:create, :destroy]
-
 end
