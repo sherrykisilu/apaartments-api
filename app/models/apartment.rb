@@ -1,6 +1,7 @@
 class Apartment < ApplicationRecord
     has_many :tenants, through: :leases
     has_many :leases
+   validates :number, presence: true
     def index
         apartments = Apartment.all
         render json: apartments
@@ -47,13 +48,5 @@ class Apartment < ApplicationRecord
         params.require(:apartment).permit(:number)
       end
     end
-    Save the changes to the apartments_controller.rb file.
-    Now, the controller actions are in the correct file, and you should be able to handle the API requests for the Apartment model properly.
-    
-    
-    
-    
-    
-    
-    Regenerate response    
-        
+  
+end
