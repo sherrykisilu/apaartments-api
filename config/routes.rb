@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  
+
     # Apartments routes
-    resources :apartments, except: [:new, :edit]
-    resources :tenants, except: [:new, :edit]
+    resources :apartment, except: [:new, :edit]
+    resources :tenant, except: [:new, :edit]
   
 end
